@@ -1,0 +1,177 @@
+﻿
+
+@{
+    ViewBag.Title = "Register";
+    Layout = null;
+}
+
+<style>
+    .col-md-6 {
+        margin-left: 25%;
+        margin-top: 50px;
+    }
+
+    .E-mail {
+        float: left;
+        margin-top: 3%;
+        margin-bottom: 2%;
+    }
+
+    #Button1 {
+        margin-top: 5%;
+        margin-bottom: 1%;
+        margin-left: 100%;
+    }
+
+    .password {
+        float: left;
+        margin-bottom: 2%;
+    }
+
+    .name_User {
+        float: left;
+        margin-bottom: 2%;
+    }
+
+    .facebook {
+        float: left;
+        margin-bottom: 2%;
+    }
+
+    .body_user {
+        float: left;
+        margin-bottom: 2%;
+        margin-left: -15%;
+    }
+
+    .Education {
+        float: left;
+        margin-bottom: 2%;
+    }
+
+    #Height, #Weight {
+        width: 20%;
+    }
+
+    #Education {
+        width: 223%;
+    }
+
+    #facebook {
+        width: 98%;
+    }
+
+    #mailk {
+        width: 500%;
+    }
+
+    #password {
+        width: 145%;
+    }
+
+    .data_user {
+        margin-left: 6%;
+    }
+
+    #File1 {
+        margin-bottom: 4%;
+        margin-top: 4%;
+    }
+
+    img {
+        margin-left: -8%;
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+    }
+
+    .imgandfile {
+        margin-left: 10%;
+    }
+
+    #C_password {
+        margin-left: 33%;
+        margin-top: 2%;
+        width: 145%;
+    }
+
+    .Birthday {
+        float: left;
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+</style>
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+
+@using (Html.BeginForm("Regis", "Register", FormMethod.Post))
+{
+    <form action="" method="put" role="form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group-addon">
+                        <div class="Register">
+                            <h5 class="Register_H5" style="">Register</h5>
+                            <div class="imgandfile">
+                                <img src="Image/20161014_58006bff8b1de.png" width="150" height="150" class="EiEikuy" />
+                                <div><input id="File1" type="file" name="File1" /></div>
+                            </div>
+                            <div class="data_user">
+                                <div class="E-mail">
+                                    <span>
+                                        <i class="fa fa-envelope-o" aria-hidden="true">
+                                            &nbsp;E-mail
+                                            <input id="mailk" type="email" placeholder="Example@hotmail.com" style="width:300px;" name="email" />
+                                        </i>&nbsp;&nbsp;
+                                    </span>
+                                </div>
+                                <div class="password">
+                                    <span>
+                                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                        &nbsp;Password&nbsp;<input id="password" type="password" name="password" />
+                                        <div class="C_password"><input id="C_password" type="password" name="C_password" /></div>
+                                    </span>
+                                </div>
+                                <div class="name_User">
+                                    <span>
+                                        Name&nbsp;<input id="Name" type="text" name="name" /> Surname&nbsp;<input id="Surname" type="text" name="surname" />
+                                    </span>
+                                </div>
+                                <div class="facebook">
+                                    <span>
+                                        <i class="fa fa-facebook-official fa-lg" aria-hidden="true">&nbsp;</i><input id="facebook" type="text" name="facebook" />
+                                    </span>
+                                    <div class="Birthday">
+                                        <span class="ssssas">
+                                            <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                            Birthday: <input type="date" name="bday" class="sdsd">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="body_user">
+                                    <span>
+                                        Height&nbsp;<input id="Height" type="text" name="Height" />&nbsp; CM.&nbsp;&nbsp;&nbsp;&nbsp;Weight&nbsp;<input id="Weight" type="text" name="Weight" />&nbsp;Kg.
+                                    </span>
+                                </div>
+                                <div class="Education ">
+                                    <span>
+                                        <i class="fa fa-university" aria-hidden="true"></i>&nbsp;<input id="Education" type="text" placeholder="Your University" name="Education" />
+                                    </span>
+                                    <div class="sdsdsdsdsdsdsds">
+                                        <input id="Button1" type="submit" value="Log in" class="btn btn-default" />
+                                        @*<asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button2_Click1" />*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+}

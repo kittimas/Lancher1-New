@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "test";
+}
+
+@foreach (var col in Model)
+{
+
+    <div class="loui">
+        <div class="444">
+
+            <div class="col-md-7" style="margin-bottom:2%">
+                ไอดีโพสต์ :&nbsp;@col.idpost
+                <div class="Name_Post">
+                    @col.namepost
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+
+}

@@ -1,0 +1,344 @@
+﻿
+@using Lancher.Models
+@model List<post_model>
+
+@{
+    ViewBag.Title = "Post";
+    Layout = null;
+}
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .Head_bar {
+        background-color: black;
+        width: 100%;
+        height: 18%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .img_Profile {
+        text-align: center;
+        background-color: black;
+    }
+
+    .Text_Profile {
+        background-color: black;
+    }
+
+    .Top.row {
+        margin-top: -0.5%;
+    }
+
+    .Icon_all {
+        background-color: rgb(240,240,240);
+        height: 700px;
+    }
+
+    .Home_icon, .Icon_profile, .Resume_icon, .Lobby, .Post {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        padding-left: 20%;
+    }
+
+        .Home_icon:hover {
+            background-color: #555;
+        }
+
+        .Icon_profile:hover {
+            background-color: #555;
+        }
+
+        .Resume_icon:hover {
+            background-color: #555;
+        }
+
+        .Lobby:hover {
+            background-color: #555;
+        }
+
+        .Post:hover {
+            background-color: #555;
+        }
+
+    #QQ {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 25%;
+    }
+
+    .Kuy {
+        margin-left: -1%;
+    }
+
+    .Deadline.col-md-2 {
+        background-color: rgb(240,240,240);
+        margin-top: 0.5%;
+        margin-left: 7%;
+    }
+
+    .ps1 {
+        border: solid;
+        margin-top: 2%;
+    }
+
+    .Head_post {
+        margin-left: 3%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+    .Body_Posting {
+    }
+
+    .ploy_prapa {
+        margin-left: 7%;
+        margin-right: 1%;
+    }
+
+    .Kuy {
+        margin-left: 7%;
+    }
+
+    .Dead_line_naja {
+        margin-left: 7%;
+    }
+
+    #RRRR, #Day, #Year {
+        width: 100px;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+    }
+
+    #Des {
+        width: 100%;
+    }
+
+    #uuio {
+        margin-left: 3%;
+    }
+
+    #link {
+        margin-left: 1%;
+    }
+
+    .button {
+        margin-left: 82%;
+    }
+
+    .aaaaa.row {
+        margin-bottom: 1%;
+    }
+
+    .ps2.row {
+        border: solid;
+        margin-top: 1%;
+        margin-left: 20%;
+        margin-bottom: 1%;
+    }
+
+    .sls.col-md-9 {
+        margin-left: 1%;
+    }
+
+    .fa.fa-ellipsis-v {
+        margin-left: 133%;
+    }
+
+    .price.col-md-11 {
+        margin-left: 86%;
+    }
+
+    .Body_posting.col-md-2 {
+        margin-top: -2%;
+        margin-left: 1%;
+        border-right: solid;
+        padding-right: 1%;
+    }
+
+
+
+    .sssssss.col-md-1 {
+        margin-top: 4%;
+        margin-left: 3%;
+    }
+
+    #ssssssssa {
+        width: 70%;
+    }
+
+    .ssssaasa.col-md-6 {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .mimmii.col-md-6 {
+        margin-left: 8%;
+    }
+
+    .sescolor {
+        color: #55aaf0
+    }
+
+
+
+    .mko {
+        width: 13%;
+        text-align: center;
+    }
+
+    #kjl {
+        margin-top: 1%;
+        margin-left: 1%;
+        margin-bottom: 1%;
+    }
+
+    .sdsdsd {
+        margin-top: 5%;
+    }
+
+    .w3-panel {
+        width: 80%;
+        margin-left: 20%;
+    }
+
+        .w3-panel.w3-border.w3-round-xlarge {
+            margin-left: 10%;
+        }
+
+    .sssssssss {
+        margin-top: -6%;
+        margin-right: 1%;
+    }
+
+    .kuh {
+        margin-top: -190em;
+    }
+
+    .oij.col-md-7 {
+        margin-top: 2%;
+        margin-left: 4%;
+    }
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/…/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/4.0…/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/…/pop…/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/…/4.0.0…/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+@using (Html.BeginForm("PostCode", "Post", FormMethod.Post))
+{
+    <form action="" method="put" role="form">
+        <div class="Head_bar">
+            <div><a class="sssss" href="Home.aspx" style="text-decoration:none"><h1 class="Kuy">Lancher</h1></a></div>
+        </div>
+        <div class="Top row">
+            <div class="left col-md-2">
+                <div class="img_Profile">
+
+                    <img id="Img_User" src="~/Image/@Session["Photo"]" class="img-circle" alt="Cinque" width="100" height="100" />
+
+                </div>
+                <div class="Text_Profile">
+                    <center class="eieie"><asp:Label ID="Useremail" ty runat="server" Text="Label" ForeColor="#3333FF"></asp:Label></center>
+                    <center class="sescolor"> @Session["email"]</center>
+                </div>
+                <div class="Icon_all" style="height:200em">
+                    <div class="Home_icon">
+                        <img src="~/Image/Graphicloads-100-Flat-Home.ico" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("FirstPage","Homer")'>Home</a>
+                    </div>
+                    <div class="Icon_profile">
+                        <img alt="" src="~/Image/20161014_58006bff8b1de.png" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("Jabb","Myjob")'>My job</a>
+                    </div>
+                    <div class="Resume_icon">
+                        <img alt="" src="~/Image/file-text-icon.png" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("Resume","Resume")'>Resume</a>
+                    </div>
+                    <div class="Lobby">
+                        <img alt="" src="~/Image/MSB_Icon_Job_green.png" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("Lobby","Lobby")'>Lobby</a>
+                    </div>
+                    <div class="Post">
+                        <img alt="" src="~/Image/Facebook-Messenger-Icon.png" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("Post","Post")'>Post</a>
+                    </div>
+                </div>
+            </div>
+
+            <h1>สร้างโพสต์</h1>
+            <div class="oij col-md-7">
+                <div class="ps1">
+                    <div class="sdsdsd">
+                        <div class="Head_post">
+                            ชื่อโพสต์  <input id="Name_Post5" type="text" name="Name_Post5" />
+                        </div>
+                        <div class="Body_Posting">
+                            <div class="ploy_prapa">รายละเอียดงาน&nbsp; <input id="Des" type="text" name="Des" /></div>
+                            <div class="Kuy">
+                                จำนวนคนที่รับสมัคร <input id="Many" type="text" name="many" /> คน&nbsp;&nbsp;&nbsp;&nbsp;
+                                ประเภทงาน&nbsp;<input id="typepost" type="text" name="typepost" />&nbsp;&nbsp;
+                                เงินรางวัล&nbsp;<input id="RRRR" type="text" name="Pucket" />&nbsp;บาท
+                            </div>
+
+                            <div class="Dead_line_naja">
+                                Deadline <input type="datetime-local" name="deadline" />
+                            </div>
+                            <div class="aaaaa row">
+                                <input id="Button1" type="submit" class="button" value="สร้าง" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+}
+
+
+<div class="kuh">
+    @using (Html.BeginForm("change", "Post", FormMethod.Post))
+    {
+        foreach (var col in Model)
+        {
+            <div class="sdaa" style="margin-top:7%">
+                <div class="ps2 col-md-7 row" style="margin-top:1%">
+                    <div class="headdddddd" style="margin-top:1%; margin-left:1%">
+                        ไอดีโพสต์ :&nbsp;@col.PostID
+
+                    </div>
+                    <div class="sls col-md-9" style="margin-top:1%">
+                        ชื่อโพส :&nbsp;<asp:Label ID="Name_Post2" runat="server">@col.Title</asp:Label>
+                    </div>
+                    <div class="settting col-md-2">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                    <div class="price col-md-11">
+                        <div class="sssssssss">ราคา&nbsp;<asp:Label ID="Price" runat="server">@col.PostMoney</asp:Label> &nbsp;บาท</div>
+                    </div>
+
+                    <div class="Flyyyy col-md-6">
+                        รายละเอียด :&nbsp;&nbsp;<asp:Label ID="Dest" runat="server">@col.PostDescrip</asp:Label>
+                    </div>
+
+
+                    <div class="Nouuu col-md-4">
+                        จำนวนคนที่รับ &nbsp;&nbsp;@col.PostMany&nbsp;&nbsp;ประเภทงาน&nbsp;&nbsp;@col.TypePost
+                    </div>
+                    <div class="mimmii col-md-6">
+                    </div>
+
+
+                    <input class="hhhh" type="submit" name="111" style="margin-top:-1.5em; float:right; margin-bottom:0.5%" value="@col.PostID" onclick="location.href='@Url.Action("change", "Post")'" />
+
+
+                </div>
+            </div>
+        }
+    }
+</div>
+

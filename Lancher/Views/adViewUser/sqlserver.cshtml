@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "sqlserver";
+    Layout = null;
+}
+
+<h2>ADDsqlserver</h2>
+@using (Html.BeginForm("addserver", "adViewUser", FormMethod.Post))
+{
+    <form action="" method="post" role="form">
+         
+        <input type="text" name="title" />  
+        <br />
+        <input type="file" name="selectImag" /> 
+        <br />
+        <input type="text" name="description" /> 
+        <br />
+
+        <input id="button" type="submit" value="สร้าง" />
+    </form>
+}

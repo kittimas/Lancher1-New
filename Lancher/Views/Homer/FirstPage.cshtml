@@ -1,0 +1,317 @@
+﻿
+@{
+    ViewBag.Title = "FirstPage";
+    Layout = null;
+}
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .Head_bar {
+        background-color: black;
+        width: 100%;
+        height: 18%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .img_Profile {
+        background-color: black;
+        text-align: center;
+    }
+
+    .Text_Profile {
+        background-color: black;
+    }
+
+    .Top.row {
+        margin-top: -0.5%;
+    }
+
+    .Icon_all {
+        height: 100%;
+        background-color: rgb(240,240,240);
+    }
+
+    .Home_icon, .Icon_profile, .Resume_icon, .Lobby, .Post {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        padding-left: 20%;
+    }
+
+        .Home_icon:hover {
+            background-color: #555;
+        }
+
+        .Icon_profile:hover {
+            background-color: #555;
+        }
+
+        .Resume_icon:hover {
+            background-color: #555;
+        }
+
+        .Lobby:hover {
+            background-color: #555;
+        }
+
+        .Post:hover {
+            background-color: #555;
+        }
+
+    #QQ {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 25%;
+    }
+
+    .Kuy {
+        margin-left: 3%;
+    }
+
+    .Home_Cosana {
+        width: 70%;
+        margin-top: 2%;
+    }
+
+    .Home_New {
+        margin-left: 1%;
+        width: 26%;
+        border-left: solid;
+    }
+
+    .rigth.col-md-10.row {
+    }
+
+    .New {
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+
+    .Hot {
+        margin-left: 3%;
+    }
+
+    .pioop {
+        margin-left: 2%;
+        margin-top: 3%;
+    }
+
+    .ssssasa {
+        border: solid;
+        width: 200px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    .btn.btn-primary {
+        margin-left: 52%;
+    }
+
+    #spo, #spos {
+        width: 90%;
+        height: 30%;
+        margin-left: 10%;
+    }
+
+    .totot {
+        padding-top: 6%;
+        margin-left: 2%;
+    }
+
+    #posdps, #posdpss {
+        margin-left: 85%;
+        margin-bottom: 8%;
+    }
+
+    .dspds {
+        border-bottom: solid;
+        margin-left: 8%;
+        padding-top: 8%;
+    }
+
+    #sdsdsdsd {
+        margin-left: 20%;
+    }
+
+    .dsdsdsds {
+        margin-top: 5%;
+        margin-left: 30%;
+    }
+
+    .btn.btn-primary {
+        margin-left: 180%;
+    }
+
+    .eieie {
+        padding-bottom: 2%;
+    }
+
+    .sescolor {
+        color: #55aaf0
+    }
+
+    #Img_User {
+        margin-top: 5%;
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    .w3-left, .w3-right, .w3-badge {
+        cursor: pointer
+    }
+
+    .w3-badge {
+        height: 13px;
+        width: 13px;
+        padding: 0
+    }
+    #Button1 {
+        margin-left: 80%;
+        margin-top: -3%;
+    }
+
+    .btn.btn-light {
+        margin-left: 90%;
+        margin-top: -3%;
+    }
+</style>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/…/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/…/4.0…/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/…/pop…/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/…/4.0.0…/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<body>
+    <div class="Head_bar">
+        @using (Html.BeginForm("Admin", "Homer", FormMethod.Post))
+        {
+            <div class="sssqaq row">
+                <a class="sssss" href="Home.aspx" style="text-decoration:none"><h1 class="Kuy">Lancher</h1></a>
+                <input id="Button1" type="button" value="Admin" hidden />
+                <input class="btn btn-light" type="button" value="Log out" onclick="location.href='@Url.Action("Logout", "Homer")'" />
+                @if (ViewBag.sdsdsdsd == "Admin")
+                {
+                    <input id="Button1" type="submit" value="Admin" onclick="location.href='@Url.Action("Admin", "Homer")'" />
+                }
+
+            </div>
+        }
+
+        @*<input class="admin" style="text-align:right" type="button" value="Admin" onclick="location.href='@Url.Action("adViewUser","adViewUser")'"/>*@
+    
+    </div>
+    <div class="Top row">
+        <div class="left col-md-2">
+            <div class="img_Profile">
+                @foreach (var item in Model)
+                {
+                    <img id="Img_User" src="~/Image/@Session["Photo"]" class="img-circle" alt="Cinque" width="100" height="100" />
+                }
+
+                <center><label id="User_pop"></label></center>
+            </div>
+            <div class="Text_Profile">
+
+                <center class="sescolor"> @Session["email"]</center>
+                @*<label>@eeeee</label>*@
+            </div>
+            <div class="Icon_all" style="height:95em">
+                <div class="Home_icon">
+                    <img src="~/Image/Graphicloads-100-Flat-Home.ico" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("FirstPage","Homer")'>Home</a>
+                </div>
+                <div class="Icon_profile">
+                    <img alt="" src="~/Image/20161014_58006bff8b1de.png" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("Jabb","Myjob")'>My job</a>
+                </div>
+                <div class="Resume_icon">
+                    <img alt="" src="~/Image/file-text-icon.png" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("Resume","Resume")'>Resume</a>
+                </div>
+                <div class="Lobby">
+                    <img alt="" src="~/Image/MSB_Icon_Job_green.png" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("Lobby","Lobby")'>Lobby</a>
+                </div>
+                <div class="Post">
+                    <img alt="" src="~/Image/Facebook-Messenger-Icon.png" width="50" height="50" />&nbsp; <a style="text-decoration:none" href='@Url.Action("Post","Post")'>Post</a>
+                </div>
+            </div>
+        </div>
+        <div class="rigth col-md-10 row">
+            <div class="qwe col-md-8 row" style="background-color:rgb(240,240,240); margin-left:3%; margin-top:3%; height:100em">
+                <div class="w3-content w3-display-container" style="width:95%; height:35%; margin-top:4%">
+
+                    <div class="w3-display-container mySlides">
+                        <img src="~/Image/1.jpg" style="width:100%">
+                        <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                            ข่าวสาร โฆษณา
+                        </div>
+                    </div>
+
+                    <div class="w3-display-container mySlides">
+                        <img src="~/Image/2.jpg" style="width:100%">
+                        <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                            ข่าวสาร โฆษณา
+                        </div>
+                    </div>
+
+                    <div class="w3-display-container mySlides">
+                        <img src="~/Image/3.jpg" style="width:100%">
+                        <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+                            ข่าวสาร โฆษณา
+                        </div>
+                    </div>
+
+                    <div class="w3-display-container mySlides">
+                        <img src="~/Image/4.jpg" style="width:100%">
+                        <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+                            ข่าวสาร โฆษณา
+                        </div>
+                    </div>
+
+
+                    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+                </div>
+
+                <script>
+                    var slideIndex = 1;
+                    showDivs(slideIndex);
+
+                    function plusDivs(n) {
+                        showDivs(slideIndex += n);
+                    }
+
+                    function showDivs(n) {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        if (n > x.length) { slideIndex = 1 }
+                        if (n < 1) { slideIndex = x.length }
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        x[slideIndex - 1].style.display = "block";
+                    }
+                </script>
+            </div>
+            <div class="sqw col-md-3 row" style="background-color:rgb(240,240,240); height:100em; margin-top:3%; margin-left:3%;">
+
+            </div>
+
+            <div class="title">
+                <h1>News</h1>
+            </div>
+
+
+        </div>
+    </div>
+</body>

@@ -1,0 +1,44 @@
+﻿@using Lancher.Models
+@model List<user>
+
+@{
+    Layout = null;
+ }
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+@using (Html.BeginForm("Ban", "adViewUser", FormMethod.Post))
+{
+    <h2 style="margin-left:1%">Adminnnnnn</h2>
+    <div class="fldkgj col-md-10 " style="border:solid; margin-left:3% ">
+        <table class="table User">
+            <tr>
+                <th>Username</th>
+                <th>Status</th>
+                <th>Status Ban</th>
+            </tr>
+
+
+            @foreach (var col in Model)
+            {
+                <tr>
+                    <td>@col.EmailID</td>
+                    <td>@col.Mistake </td>
+                    <td>
+                        
+                            <form action="/adViewUser/Ban" method="post">
+                                <input type="hidden" name="111" value="@col.EmailID" />
+                                <select id="Status" name="Statuss">
+                                    <option value="0">-------</option>
+                                    <option value="Active">Active</option>
+                                    <option value="Ban">Ban</option>
+                                </select>
+                                <button type="submit">save</button>
+                            </form>
+                      
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+}

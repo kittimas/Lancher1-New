@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "join";
+    Layout = null;
+}
+
+@using Lancher.Models
+@model List<ThreeTableViewModel>
+
+<h1>ผู้ที่มาสมัครเข้าร่วมงาน</h1>
+
+@foreach (var col in Model)
+{
+    
+    <div class="132" >
+        
+        <div class="dd col-md-2" style="border:solid; width:50%; height:5%; margin-bottom:1%; " >
+            <div class="drg" style="margin-top:0.5%">
+                ไอดีโพสต์ : @col.PostID
+
+                โดยมีผู้สมัคร : @col.EmailID
+
+                <input type="submit" value="ยืนยัน" style="float:right; margin-right:1%;margin-top:0.3%;" />
+            </div>
+            
+        </div>
+        
+      </div>
+}
+
