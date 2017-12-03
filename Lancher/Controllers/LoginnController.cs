@@ -28,19 +28,22 @@ namespace Lancher.Controllers
             if (email != null && pass != null)
             {
                 MySqlConnection con = new MySqlConnection("host=localhost;user=Lancher;password=123456;database=lancherdb");
-                string strSQL = "SELECT * FROM user WHERE EmailID = '" + email + "' AND Password = '" + pass + "'";
+                string strSQL = "SELECT * FROM user WHERE EmailID = '" + email + "' AND Password = '" + pass + "' AND Mistake = '"+"Active"+"'";
 
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand(strSQL, con);
                 cmd.ExecuteNonQuery();
 
                 var obj = cmd.ExecuteScalar();
-                
-                if ( obj != DBNull.Value)
+                try
                 {
                     Session["email"] = obj.ToString();
-                    
                     return RedirectToAction("FirstPage", "Homer");
+                }
+                catch
+                {
+                    ViewBag.Ty = "Failded";
+                    return RedirectToAction("Loginn", "Loginn");
                 }
 
             }
