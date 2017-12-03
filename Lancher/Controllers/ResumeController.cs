@@ -37,6 +37,7 @@ namespace Lancher.Controllers
                 while (rd.Read())
                 {
                     var User = new user();
+                    //หกหกหกห
 
                     User.FirstName = rd.GetString(2);
                     User.LastName = rd.GetString(3);
