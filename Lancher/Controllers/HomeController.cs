@@ -26,5 +26,9 @@ namespace Lancher.Controllers
 
             return View();
         }
+        public ActionResult dsdsds()
+        {
+            return View();
+        }
     }
 }
