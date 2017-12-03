@@ -56,7 +56,7 @@ namespace Lancher.Controllers
 
         public ActionResult Reee()
         {
-            //ssss
+            //sssssss
             return RedirectToAction("Register", "Register");
         }
     }
